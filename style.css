@@ -83,7 +83,6 @@ span {
     color: transparent;
 }
 
-/* Navigation */
 .navbar {
     display: flex;
     transition: all 0.3s ease;
@@ -176,112 +175,117 @@ span {
 }
 
 @media (max-width: 480px) {
+    section {
+        padding: 6rem 5%;
+    }
+
     html {
         font-size: 50%;
     }
-    
+
     .navbar a {
         font-size: 2.5rem;
         margin: 1.5rem 0;
     }
-    
+
     .home {
         flex-direction: column;
         text-align: center;
         padding: 12rem 5% 5rem;
     }
-    
+
     .home-content {
         width: 100%;
         margin-bottom: 3rem;
     }
-    
+
     .home-img {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    
+
     .home-img img {
         max-width: 80%;
         height: auto;
     }
-    
+
     .about {
         flex-direction: column;
         padding: 10rem 5% 5rem;
         text-align: center;
     }
-    
+
     .about-content {
         width: 100%;
     }
-    
+
     .about-img {
         width: 100%;
         margin-bottom: 3rem;
     }
-    
+
     .about-img img {
         max-width: 80%;
         height: auto;
     }
-    
+
     .skills-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         padding: 0 5%;
     }
-    
+
     .skill-item {
         padding: 1.5rem;
     }
-    
-    .skill-item i, .skill-item img {
+
+    .skill-item i,
+    .skill-item img {
         width: 40px;
         height: 40px;
         font-size: 3rem;
     }
-    
+
     .skill-label {
         font-size: 1.4rem;
     }
-    
+
     .projects-box {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .project-card {
         width: 90%;
         margin-bottom: 3rem;
     }
-    
+
     .services-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .service-box {
         width: 90%;
         margin-bottom: 2rem;
     }
-    
+
     .contact form .input-group {
         flex-direction: column;
     }
-    
+
     .contact form .input-group input,
     .contact form .input-group textarea {
         width: 100%;
         margin-bottom: 1.5rem;
     }
-    
+
     .btn-group {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn {
         width: 100%;
         margin-bottom: 1rem;
@@ -289,14 +293,12 @@ span {
     }
 }
 
-/* Skills section label styling */
 .skills-content .skill-label {
     font-size: 1.6rem;
     margin-top: 1rem;
     color: white;
 }
 
-/* C icon image styling */
 .skills-content .c-icon-img {
     width: 66px;
     height: 66px;
@@ -400,7 +402,7 @@ section {
 .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
+        0 0 50px var(--main-color);
 }
 
 .btn-group a:nth-of-type(2) {
@@ -474,6 +476,9 @@ section {
 .services {
     background-color: var(--bg-color);
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .services h2 {
@@ -481,9 +486,10 @@ section {
 }
 
 .services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 2.5rem;
 }
 
@@ -493,6 +499,8 @@ section {
     align-items: center;
     background-color: var(--main-color);
     height: 320px;
+    width: 300px;
+    flex-shrink: 0;
     border-radius: 3rem;
     cursor: pointer;
     border: 5px solid transparent;
@@ -562,6 +570,7 @@ section {
     cursor: pointer;
     box-shadow: 0 0 5px var(--main-color);
     transition: 0.3s ease;
+    align-items: center;
 }
 
 .project-card:hover {
@@ -627,11 +636,18 @@ section {
 .footer ul {
     text-align: center;
     font-size: 1.8rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .footer ul li {
     display: inline-block;
-    margin-left: 20px;
+    margin: 0;
 }
 
 .footer ul li a {
@@ -646,20 +662,23 @@ section {
 
 .footer .copyright {
     text-align: center;
-    margin-top: 40px;
-    font-size: 16px;
+    margin: 40px auto 0;
+    font-size: 1.6rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* Skills Section */
 .skills-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem 2rem;
     margin: 3rem auto;
-    padding: 0 5%;
-    max-width: 1200px;
-    max-width: 1200px;
-    padding: 0 2rem;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    justify-items: center;
 }
 
 .skill-item {
@@ -668,7 +687,8 @@ section {
     align-items: center;
     width: 100%;
     min-width: 0;
-    /* Prevents flex items from overflowing */
+    padding: 1.5rem 1rem;
+    transition: all 0.3s ease;
 }
 
 .skill-item i,
@@ -693,7 +713,6 @@ section {
     width: 100%;
 }
 
-/* Skill icon specific colors */
 .skills-content .fa-html5 {
     color: #ea580c !important;
 }
@@ -742,7 +761,6 @@ section {
     color: #d24726 !important;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1200px) {
     .skills-content {
         grid-template-columns: repeat(4, 1fr);
