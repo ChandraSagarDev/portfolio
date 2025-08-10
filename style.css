@@ -418,6 +418,10 @@ section {
     gap: 1.5rem;
 }
 
+.review-btn {
+    color: var(--bg-color);
+}
+
 .btn {
     display: inline-block;
     padding: 1rem 3rem;
