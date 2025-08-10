@@ -125,11 +125,11 @@
             </div>
 
             <div class="skill-item">
-                <i class="fa-solid fa-scissors"></i>
+                <i class="fa-solid fa-scissors" style="width: 66px; height: 66px;"></i>
                 <span class="skill-label">CapCut</span>
             </div>
             <div class="skill-item">
-                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fa-brands fa-bootstrap" style="width: 66px; height: 66px;"></i>
                 <span class="skill-label">Bootstrap</span>
             </div>
             <div class="skill-item">
@@ -208,29 +208,31 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
+        <form id="contact-form" action="https://formspree.io/f/mpwlogew" method="POST">
 
             <div class="input-group">
-
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
 
                 <div class="input-box">
-                    <input type="tel" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="tel" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject" required>
                 </div>
-
             </div>
-            <div class="input-group-2">
 
-                <textarea name="" id="" placeholder="Your Message" cols="30" rows="10"></textarea>
+            <div class="input-group-2">
+                <textarea name="message" id="" placeholder="Your Message" cols="30" rows="10" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
 
             </div>
-
         </form>
+
+        <div id="form-message" class="form-message">
+            Thank you! Your message has been sent.
+        </div>
+
     </section>
 
     <footer class="footer">
@@ -261,7 +263,7 @@
 
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

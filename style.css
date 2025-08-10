@@ -29,6 +29,38 @@ body.no-scroll {
     overflow: hidden;
 }
 
+/* Form Message Styles */
+.form-message {
+    display: none;
+    margin: 2rem auto 0;
+    padding: 1.5rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-width: 600px;
+    width: 90%;
+}
+
+.form-message.success {
+    background-color: rgba(46, 213, 115, 0.15);
+    color: #2ed573;
+    border: 1px solid rgba(46, 213, 115, 0.3);
+}
+
+.form-message.error {
+    background-color: rgba(255, 71, 87, 0.15);
+    color: #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+/* Loading spinner for submit button */
+.btn .fa-spinner {
+    margin-right: 8px;
+}
+
 .skills-heading {
     font-size: 7rem;
 }
@@ -308,7 +340,7 @@ span {
 
 section {
     min-height: 100vh;
-    padding: 7rem 15%;
+    padding: 6rem 15% 4rem 15%;
 }
 
 .home {
@@ -470,7 +502,7 @@ section {
 .heading {
     text-align: center;
     font-size: 7rem;
-    margin: 5rem 0;
+    margin: 2rem 0 4rem 0;
 }
 
 .services {
@@ -498,7 +530,7 @@ section {
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    height: 320px;
+    height: 380px;
     width: 300px;
     flex-shrink: 0;
     border-radius: 3rem;
@@ -598,7 +630,7 @@ section {
 }
 
 .contact h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--text-color);
 }
 
@@ -607,7 +639,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    margin: 5rem 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -670,7 +702,7 @@ section {
     box-sizing: border-box;
 }
 
-/* Skills Section */
+
 .skills-content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -738,7 +770,7 @@ section {
 }
 
 .skills-content .fa-github {
-    color: #fff !important;
+    color: #ffffffea !important;
 }
 
 .skills-content .fa-globe {
@@ -787,7 +819,7 @@ section {
 
 @media (max-width: 480px) {
     .skills-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         max-width: 300px;
     }
 
